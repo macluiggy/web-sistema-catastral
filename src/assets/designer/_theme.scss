@@ -1,0 +1,188 @@
+html, body{  
+    background-color: $bg-body; 
+    height: 100%; 
+}
+body{ 
+    font: 400 12px/20px Roboto, "Helvetica Neue", sans-serif; 
+    margin: 0; 
+}
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+
+/* ----------------------------
+        [ HEADER ]
+-----------------------------*/
+.box-sgtm{
+    position: absolute;
+}
+.sgtm-header{
+    background-color: $bg-header;
+    width: 100%;
+    height: 60px;
+    position: fixed; 
+    .sgtm-header__navbar{ 
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        .navbar-left{ 
+            width: 15rem;
+            padding: 0px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .nl-logo{   
+                .logo-txt{
+                    font-family: "Days One", sans-serif;
+                    font-style: normal;
+                    font-weight: 400; 
+                    text-transform: uppercase;
+                    margin-left: 10px;
+                }
+            }
+            .nl-btn-menu{
+                cursor: pointer; 
+            }
+        } 
+        .navbar-right{ 
+            padding-right: 10px; 
+            .navbar-right__brand{
+                a{
+                    margin-right: 0.6rem;
+                    cursor: pointer;
+                    font-size: 1rem;
+                    color: $icon-header;
+                }
+                a:hover{
+                    color: $icon-header-hover;
+                }
+            }
+            .navbar-user{                
+                padding: 10px;
+                padding-right: 0;
+            }
+            .box-avatar{
+                background-color: rgb(7, 35, 55);
+                color: white;
+                cursor: pointer;
+                z-index: 2;
+            }                        
+            .badge_user {
+                display: inline-block;
+                background-color: #008000;
+                border-radius: 50%;
+                color: #fff;
+                padding: 0.3em 0.3em;
+                left: -9px;
+                top: 10px;
+                position: relative;
+                z-index: 5;
+                border: 2px solid #fff;
+            }            
+            .pulsate_user::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                -webkit-animation: ripple 1.2s infinite ease-in-out;
+                animation: ripple 1.2s infinite ease-in-out;
+                border: 1px solid #008000;
+            }
+            .box_SignOff{
+                background: $bg_SignOff;
+                padding: 0.55rem 1rem;
+                margin-top: 97px;
+                position: absolute;
+                right: 0px;
+                a{
+                    color: $txt_SignOff !important;
+                    text-decoration: none;
+                }          
+            }
+  
+        }
+    }
+
+}
+/* ----------------------------
+        [ MENU ]
+-----------------------------*/
+.sgtm-menu{
+    background-color: $bg-menu;   
+    color: $txt-menu;
+    width: 15rem;
+    height: calc(100% - 60px);
+    margin-top: 60px;
+    position: fixed;
+    overflow: auto;
+    .sgtm-box-menu{ 
+        min-height: 100%;
+        p-panelMenu{
+            .p-panelmenu{  
+                height:calc(100% - 37px);
+                margin-bottom: 75px;
+            }
+        }
+        .box-menu__footer{ 
+            background: $bg-menu-footer;
+            color: $txt-menu-footer;
+            padding: 8px 10px;
+            bottom: 0;
+            position: fixed;
+            width: 15rem; 
+            text-align: center; 
+            i{
+                padding: 5px;
+            }
+        }
+    }
+} 
+.sgtm-menu::-webkit-scrollbar{
+    width: 0;
+}
+#menuItemIcon{
+    display: none;
+}
+.p-panelmenu .p-panelmenu-header > a {
+    border: 1px solid $brd-panelmenu;
+    background:  $bg-panelmenu;
+    color: $txt-panelmenu;
+    font-weight: 400;
+} 
+.p-panelmenu .p-panelmenu-header.p-highlight > a{
+    background: $bg-panelmenu-active;
+    border-color: $brd-panelmenu-active;
+    color: $txt-panelmenu-active;
+}
+.p-panelmenu .p-panelmenu-header.p-highlight:not(.p-disabled) > a:hover{
+    background: $bg-panelmenu-hd;
+    border-color: $brd-panelmenu-hd;
+    color: $txt-panelmenu-hd;
+}
+.p-panelmenu .p-panelmenu-header:not(.p-highlight):not(.p-disabled) > a:hover {
+    background:  $bg-panelmenu-hover;
+    border-color: $brd-panelmenu-hover;
+    color: $txt-panelmenu-hover;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+.p-panelmenu .p-panelmenu-content .p-menuitem .p-menuitem-link:not(.p-disabled):hover{
+    background: $bg-panelmenu-menuitem-hover;
+}
+.p-panelmenu .p-panelmenu-content .p-submenu-list:not(.p-panelmenu-root-submenu){
+    background: $bg-panelmenu-box-submenu;
+}
+
+/* ----------------------------
+        [ CONTENT ]
+-----------------------------*/
+.sgtm-content{    
+    width: calc(100% - 15rem);
+    min-height: calc(100% - 60px);
+    margin-left: 15rem; 
+    margin-top: 60px;
+    position: relative;
+    padding: 1rem;
+}

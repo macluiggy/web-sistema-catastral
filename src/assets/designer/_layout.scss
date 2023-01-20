@@ -1,0 +1,97 @@
+/* FONT SIZE */
+.font-05{  font-size: 0.5rem; }
+.font-06{  font-size: 0.6rem; }
+.font-07{  font-size: 0.7rem; }
+.font-08{  font-size: 0.8rem; }
+.font-09{  font-size: 0.9rem; }
+.font-1{  font-size: 1rem; } 
+.mat-body, .mat-body-1, .mat-typography {
+    font: 400 12px/20px Roboto, "Helvetica Neue", sans-serif;
+}
+.p-component{
+    font-size: inherit;
+}
+/* DISPLAY */
+.p-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SELECT */
+.no-select{    
+    -webkit-user-select: none;
+    user-select: none; 
+}
+
+/* TOOLTIP */
+.p-tooltip{ 
+    display: block; 
+    .p-tooltip-text{
+        background-color: $bg-tooltip;
+        padding: 5px 15px;
+        border-radius: 5px;
+    }
+}  
+.p-tooltip.p-tooltip-left .p-tooltip-arrow {
+    border-left-color: $bg-tooltip;
+}
+.p-tooltip.p-tooltip-right .p-tooltip-arrow {
+    border-right-color: $bg-tooltip;
+}
+.p-tooltip.p-tooltip-top .p-tooltip-arrow {
+    border-top-color: $bg-tooltip;
+}
+.p-tooltip.p-tooltip-bottom .p-tooltip-arrow {
+    border-bottom-color: $bg-tooltip;
+}
+
+/* BADGE */
+.svg-badge{
+    min-width: 6px;
+    height: 6px;
+    padding: 0!important;
+    position: absolute;
+    right: 86px;
+    top: 18px;
+}
+
+.p-dialog-right .p-dialog {
+    max-height: 100%;
+    margin: 0px !important;
+}
+
+/* SLIDER MENU */ 
+ 
+.p-panelmenu{   
+    .p-panelmenu-content{
+        padding: 0px;
+        .p-menuitem{
+            .p-menuitem-link{         
+                padding: 0.7rem 1rem;
+            }
+            .p-menuitem-link:focus{
+                box-shadow: none;
+            }
+        }
+    }    
+    .p-panelmenu-header > a{         
+        padding: 0.7rem 1rem;
+    }
+    .p-panelmenu-header > a:focus{
+        box-shadow: none;
+    }
+    .p-panelmenu-header > a .p-panelmenu-icon{
+        position: absolute;
+        right: 2px;
+        margin-right: 0.5rem;
+        font-size: 1em;
+    }
+    .p-submenu-list{
+        padding: 0px!important;
+    }
+}
+
+.p-panelmenu .p-panelmenu-panel{
+    margin-bottom: 0;
+}

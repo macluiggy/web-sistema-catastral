@@ -1,0 +1,79 @@
+{
+	"data": [
+		{
+			"label": "Inicio", 
+			"icon": "fa-solid fa-database ",
+            "active": true,
+            "tooltipOptions": {} 
+		},
+		{
+			"label": "Inicio", 
+			"icon": "fa-solid fa-house",
+            "tooltipOptions":{},
+            "items":[
+                {
+                    "label": "1", 
+                    "icon": "fa-solid fa-plus",
+                    "tooltipOptions":{}
+                },
+                {
+                    "label": "2", 
+                    "icon": "fa-solid fa-plus",
+                    "tooltipOptions":{}
+                },
+                {
+                    "label": "3", 
+                    "icon": "fa-solid fa-plus",
+                    "tooltipOptions":{}
+                },
+                {
+                    "label": "4", 
+                    "icon": "fa-solid fa-plus",
+                    "tooltipOptions":{}
+                }
+            ] 
+		},
+		{
+			"label": "Opcion2", 
+			"icon": "fa-solid fa-house",
+            "tooltipOptions": {},
+			"items":[
+                {
+                    "label": "444", 
+                    "icon": "fa-solid fa-plus",
+                    "tooltipOptions":{}
+                },
+                {
+                    "label": "2", 
+                    "icon": "fa-solid fa-plus",
+                    "tooltipOptions":{}
+                },
+                {
+                    "label": "3", 
+                    "icon": "fa-solid fa-plus",
+                    "tooltipOptions":{}
+                },
+                {
+                    "label": "4", 
+                    "icon": "fa-solid fa-plus",
+                    "tooltipOptions":{}
+                }
+            ]  
+		},
+		{
+			"label": "Inicio", 
+			"icon": "fa-solid fa-house",
+            "tooltipOptions": {} 
+		},
+		{
+			"label": "Inicio", 
+			"icon": "fa-solid fa-house",
+            "tooltipOptions": {} 
+		},
+		{
+			"label": "Inicio", 
+			"icon": "fa-solid fa-house",
+            "tooltipOptions": {} 
+		}
+	]
+}

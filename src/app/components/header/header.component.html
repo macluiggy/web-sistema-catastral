@@ -1,0 +1,71 @@
+ 
+<nav class="sgtm-header__navbar">
+    <!-- NAVBAR LEFT -->
+    <div class="navbar-left">
+        <div class="nl-logo p-center">
+            <img width="40" height="40" [src]="img_sistema"/>
+            <div class="logo-txt font-06 no-select">
+                SGTM
+            </div>  
+        </div>              
+        <a class="nl-btn-menu p-center" (click)="menu()"> 
+            <img *ngIf="menu_completo" width="25" [src]="img_menu"/>
+            <img *ngIf="menu_collapse" width="25" [src]="img_collapse"/>
+         </a>
+    </div>
+    <!-- NAVBAR RIGHT -->
+    <div class="navbar-right p-center">
+        <div class="navbar-right__brand">
+            <!-- modo oscuro -->
+            <a (click)="darkMode()">
+                <i *ngIf="modo_oscuro" class="fa-solid fa-moon"></i>
+                <i *ngIf="modo_claro" class="fa-solid fa-sun"></i>
+            </a> 
+            <!-- notificaciones -->
+            <a (click)="showNotificacion()"> 
+                <i class="fa fa-solid fa-bell"></i> 
+                <p-badge severity="danger" styleClass="svg-badge mr-2"></p-badge>
+            </a> 
+            <!-- apps -->
+            <a (click)="menuApps('right')">
+                <i class="fa-brands fa-microsoft"></i>
+            </a>        
+            <p-dialog 
+                [showHeader]="false" 
+                [(visible)]="modal_Apps" 
+                [position]="position_modal" 
+                [modal]="true" 
+                [style]="{width: '250px', height:'100%' }" 
+                [dismissableMask]="true" 
+                class="p-dialog-right p-dialog-p0"
+            >
+                <!-- <iframe
+                    style="height: 100%; width: 100%"
+                    loading="lazy"
+                    [src]="urlIframe"
+                    frameborder="0"
+                ></iframe> --> 
+            </p-dialog>
+        </div>         
+        <!-- User -->
+        <a class="navbar-user no-select"
+           pTooltip={{name_user}}
+           tooltipPosition="left" 
+           tooltipStyleClass="font-07"
+           (click)="User()">
+           <p-avatar 
+               label= {{inicial_name}}  
+               styleClass="box-avatar"  
+               size="small">
+           </p-avatar>            
+           <div class="badge_user pulsate_user"></div>
+        </a>
+         <!-- content botón user-->
+        <div class="box_SignOff" *ngIf="box_SignOff">
+            <a href="" (click)="cerrar_sesion()">
+                <i class="fa-solid fa-power-off mr-1"></i>
+                Cerrar sesión
+            </a>
+        </div>
+    </div>
+</nav>

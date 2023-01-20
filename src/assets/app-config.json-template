@@ -1,0 +1,18 @@
+{
+  "production": ,
+  "secretKey": "",
+  "idClient": ,
+  "secretClient": ,
+  "ip": "",
+  "dev": "",
+  "port": ,
+  "https": ,
+  "baseUrl": "",
+  "timeInactividad": ,
+  "version": "",
+  "timeEspera": ,
+  "mensajeEspera": "",
+  "urlHome":"",
+  "urlThisApp":"",
+  "urlAppLaucher":""
+}

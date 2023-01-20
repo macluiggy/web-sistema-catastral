@@ -1,0 +1,10 @@
+<div class="sgtm-box-menu">
+    <p-panelMenu [multiple]="false" [model]="menuTemporal" id="menuItem"></p-panelMenu>
+    <div #footerItem class="box-menu__footer p-center" 
+        [tooltipDisabled]="disabled_TooltipItem" 
+        pTooltip= 'Developed by Bitekso S.A.'
+        tooltipPosition= 'right'>
+        <span *ngIf="menuItemIcon"><i class='fa-solid fa-laptop-code'></i></span>
+        <span *ngIf="menuItemText"> Developed by <b>Bitekso S.A.</b> </span>
+    </div>
+</div>
