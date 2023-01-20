@@ -23,13 +23,17 @@ import { RouteReuseStrategy } from '@angular/router';
 import { DatePipe, HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
 import { AppInitService } from './services/app-init.service';
+import { HeaderComponent } from './components/header/header.component';
+import { MenuComponent } from './components/menu/menu.component';
 export function initApp(appLoadService: AppInitService) {
   return () => appLoadService.init()
 }
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,7 @@ export function initApp(appLoadService: AppInitService) {
     NgIdleKeepaliveModule.forRoot(),
     HttpClientModule,
     BpmModule,
-    InicioModule,
+    // InicioModule,
   ],
   providers: [
     //  {provide: LocationStrategy, useClass: PathLocationStrategy},

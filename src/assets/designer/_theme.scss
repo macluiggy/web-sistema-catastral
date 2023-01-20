@@ -20,6 +20,7 @@ body{
     height: 60px;
     position: fixed; 
     .sgtm-header__navbar{ 
+        z-index: 90000;
         width: 100%;
         height: 100%;
         display: flex;
@@ -179,9 +180,9 @@ body{
         [ CONTENT ]
 -----------------------------*/
 .sgtm-content{    
-    width: calc(100% - 15rem);
+    width: calc(100%);
     min-height: calc(100% - 60px);
-    margin-left: 15rem; 
+    // margin-left: 15rem; 
     margin-top: 60px;
     position: relative;
     padding: 1rem;

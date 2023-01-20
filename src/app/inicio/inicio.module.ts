@@ -12,8 +12,8 @@ import { MenuComponent } from '../components/menu/menu.component';
 @NgModule({
   declarations: [
     InicioComponent, 
-    HeaderComponent,
-    MenuComponent
+    // HeaderComponent,
+    // MenuComponent
   ],
   imports: [
     CommonModule,

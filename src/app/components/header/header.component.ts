@@ -71,6 +71,8 @@ export class HeaderComponent implements OnInit {
 
   //Cerrar sesión
   cerrar_sesion(){ 
+    console.log('cerrar_sesion');
+    
     this.authService.cerrarSesion();
   }
 

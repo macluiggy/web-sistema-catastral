@@ -1,11 +1,509 @@
-<div class="box-sgtm">
-    <section class="sgtm-header shadow-2">
-        <sgtm-header></sgtm-header>
-    </section>
-    <section class="sgtm-menu">
-        <app-menu></app-menu>
-    </section>
-    <section class="sgtm-content">
-    dgfdfg
-    </section>
+<header>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <div class="header-title d-flex justify-content-center">                
+        <img width="40" height="40" src="../assets/image/icon-sistema-catastral.svg">
+        <div class="ml-2 d-flex align-items-center">
+            <span class="txt-important">Portal Web</span> 
+            <span class="ml-1">| Sistema Catastral</span>
+        </div>
+    </div>
+    <div class="header-menu d-flex justify-content-center">
+        <ul class="nav justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link" id="inicio-tab" data-toggle="tab" href="#inicio" role="tab" aria-controls="inicio" aria-selected="true">
+                    Inicio
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" id="formulario-tab" data-toggle="tab" href="#formulario" role="tab" aria-controls="formulario" aria-selected="true">
+                    Formulario
+                </a>
+            </li> 
+          </ul>
+          <a class="nav-right" (click)="cerrar_sesion()" data-toggle="tooltip" data-placement="right" title="Cerrar sesión"><i class="fa-solid fa-right-from-bracket"></i></a>
+    </div>
+</header>
+<div class="box-section">
+    <div class="tab-content shadow-sm" id="myTabContent">
+      <div class="tab-pane fade show" id="inicio" role="tabpanel" aria-labelledby="inicio-tab">Inicio</div>
+      <div class="tab-pane fade show active" id="formulario" role="tabpanel" aria-labelledby="formulario-tab">
+        <div class="container-box">
+            <form> 
+                <!-- CLAVE CATASTRAL -->
+                <div class="divider mb-3">
+                    <b>Clave Catastral</b>
+                    <hr>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label for="exampleInputEmail1">Clave Catastral Concatenada: </label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="13123123123123100" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-info" type="button" id="button-addon2">Buscar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="result">Resultado de la búsqueda:</label>
+                        <input  type="text" class="form-control" id="result" placeholder="Resultado....">
+                    </div>
+                </div> 
+                <!-- FOTOGRAFÍA -->
+                <div class="divider mb-3">
+                    <b>Fotografia</b>
+                    <hr>
+                </div>
+                <div class="row mt-4">
+                    <div class="form-group col-sm-6"> 
+                        <div class="input-group mb-3">
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" id="customFileLangHTML" aria-describedby="file_foto">
+                              <label class="custom-file-label" for="customFileLangHTML"></label>
+                            </div>
+                            <div class="input-group-append">
+                              <button class="btn btn-file btn-info" type="button" id="file_foto">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <div class="form-group__section">
+                            <ul>
+                                <li>
+                                    FOTO 1
+                                </li>
+                                <li>
+                                    FOTO 2
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- TIPO DE TENENCIA -->
+                <div class="divider mb-3">
+                    <b>Tipo de tenencia</b>
+                    <hr>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-3"> 
+                        <label for="result">Ciudadano:</label>
+                        <select class="form-control" id="exampleFormControlSelect1"> 
+                            <option selected>Seleccionar Ciudadano</option>
+                            <option>Ciudadano 1</option> 
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-2">
+                        <label for="result">tipo tenencia:</label>
+                        <input type="text" class="form-control" id="result" placeholder="2">
+                        <small id="emailHelp" class="form-text text-muted">Información.</small>
+                    </div>
+                    <div class="form-group col-sm-2">
+                        <label for="result">Porcentaje propiedad:</label>
+                        <input type="text" class="form-control" id="result" placeholder="">
+                        <small id="emailHelp" class="form-text text-muted">Información.</small>
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <label for="result">Campos según el tipo:</label>
+                        <input type="text" class="form-control" id="result" placeholder="">
+                        <small id="emailHelp" class="form-text text-muted">Información.</small>
+                    </div>
+                    <div class="form-group col-sm-2 d-flex align-items-center">
+                        <button type="button" class="btn btn-info btn-sm mr-1">Guardar</button>
+                        <button type="button" class="btn btn-secondary btn-sm">Agregar</button>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="form-group col-sm-3"> 
+                        <label for="result">Ciudadano:</label>
+                        <select class="form-control" id="exampleFormControlSelect1"> 
+                            <option selected>Seleccionar Ciudadano</option>
+                            <option>Ciudadano 1</option> 
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-2">
+                        <label for="result">tipo tenencia:</label>
+                        <input type="text" class="form-control" id="result" placeholder="2">
+                        <small id="emailHelp" class="form-text text-muted">Información.</small>
+                    </div>
+                    <div class="form-group col-sm-2">
+                        <label for="result">Porcentaje propiedad:</label>
+                        <input type="text" class="form-control" id="result" placeholder="">
+                        <small id="emailHelp" class="form-text text-muted">Información.</small>
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <label for="result">Campos según el tipo:</label>
+                        <input type="text" class="form-control" id="result" placeholder="">
+                        <small id="emailHelp" class="form-text text-muted">Información.</small>
+                    </div>
+                    <div class="form-group col-sm-2 d-flex align-items-center">
+                        <button type="button" class="btn btn-info btn-sm mr-1">Guardar</button>
+                        <button type="button" class="btn btn-secondary btn-sm">Agregar</button>
+                    </div>
+                </div>
+                <!-- USO DE LOTE -->
+                <div class="divider mb-3">
+                    <b>Uso de lote</b>
+                    <hr>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-3"> 
+                        <label for="result">Uso de lote:</label>
+                        <select class="form-control" id="exampleFormControlSelect1"> 
+                            <option selected>Seleccionar Uso de lote</option>
+                            <option>Lote 1</option> 
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <label for="no_entradas">No de entradas a la vivienda:</label>
+                        <input type="text" class="form-control" id="no_entradas" placeholder="2">
+                        <small id="no_entradas" class="form-text text-muted">Ingrese número de entradas.</small>
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <label for="observacion">Observación:</label>
+                        <textarea class="form-control" id="observacion" rows="1" placeholder="Agregar Observación..." required></textarea>
+                    </div>
+                    <div class="form-group col-sm-3 d-flex align-items-center">
+                        <button type="button" class="btn btn-info btn-sm">Guardar</button> 
+                    </div>
+                </div>                        
+                <!-- CARACTERISTICAS -->
+                <div class="divider mb-3">
+                    <b>Características Constructivas</b>
+                    <hr>
+                </div>
+                <div class="accordion mb-5" id="accordionExample">
+                    <div class="card">
+                      <div class="card-header" id="bloque1"> 
+                          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseBloque1" aria-expanded="true" aria-controls="collapseBloque1">
+                            Bloque 1
+                          </button> 
+                      </div>
+                      <div id="collapseBloque1" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="card" id="infoB1Piso1">
+                                <div class="card-header" id="B1Piso1"> 
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseB1Piso1" aria-expanded="false" aria-controls="collapseTwo">
+                                       Piso 1
+                                    </button> 
+                                </div>
+                                <div id="collapseB1Piso1" class="collapse" aria-labelledby="B1Piso1" data-parent="#infoB1Piso1">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="form-group col-sm-3"> 
+                                                <label for="result">Bloque:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="1" disabled>
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Piso:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="2" disabled>
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Columna primer piso:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="5">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Columna piso superior:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div> 
+                                        </div> 
+                                        <div class="row">
+                                            <div class="form-group col-sm-3"> 
+                                                <label for="result">Vigas:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="1">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Pared:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="2">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Losa / entre piso:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="5">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Cubierta:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div> 
+                                        </div> 
+                                        <div class="row">
+                                            <div class="form-group col-sm-3"> 
+                                                <label for="result">Tumbados:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="1">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Pisos:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="2">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Puerta:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="5">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Ventana:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div> 
+                                        </div> 
+                                        <div class="row">
+                                            <div class="form-group col-sm-3"> 
+                                                <label for="result">Revestimiento externo:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="1">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Revestimiento interno:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="2">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Revestimiento cubierta:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="5">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Condición Física:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div> 
+                                        </div> 
+                                        <div class="row">
+                                            <div class="form-group col-sm-3"> 
+                                                <label for="result">Etapa de la construcción:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="1">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Estado de conservación:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="2">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Condición de ocupación:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="5">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Tipo de acabo:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div> 
+                                        </div> 
+                                        <div class="row">
+                                            <div class="form-group col-sm-3"> 
+                                                <label for="result">Uso de la construcción:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="1" disabled>
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Valor cultural:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="2">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Año de construcción:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="5">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Agregar Imagen:</label>
+                                                <div class="input-group mb-3">
+                                                    <div class="custom-file">
+                                                      <input type="file" class="custom-file-input" id="customFileLangHTML" aria-describedby="file_foto">
+                                                      <label class="custom-file-label" for="customFileLangHTML"></label>
+                                                    </div> 
+                                                </div>
+                                            </div> 
+                                        </div> 
+                                        <hr>
+                                        <div class="btn-form d-flex align-items-center justify-content-center">
+                                            <button type="submit" class="btn btn-info">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div> 
+                    <div class="card">
+                      <div class="card-header" id="bloque2"> 
+                          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseBloque2" aria-expanded="true" aria-controls="collapseBloque2">
+                            Bloque 2
+                          </button> 
+                      </div>
+                      <div id="collapseBloque2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="card" id="infoB2P1">
+                                <div class="card-header" id="B2Piso1"> 
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseB2Piso1" aria-expanded="false" aria-controls="collapseTwo">
+                                       Piso 1
+                                    </button> 
+                                </div>
+                                <div id="collapseB2Piso1" class="collapse" aria-labelledby="B2Piso1" data-parent="#infoB2P1">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="form-group col-sm-3"> 
+                                                <label for="result">Bloque:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="1" disabled>
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Piso:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="2" disabled>
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Columna primer piso:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="5">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Columna piso superior:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div> 
+                                        </div> 
+                                        <div class="row">
+                                            <div class="form-group col-sm-3"> 
+                                                <label for="result">Vigas:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="1">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Pared:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="2">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Losa / entre piso:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="5">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Cubierta:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div> 
+                                        </div> 
+                                        <div class="row">
+                                            <div class="form-group col-sm-3"> 
+                                                <label for="result">Tumbados:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="1">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Pisos:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="2">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Puerta:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="5">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Ventana:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div> 
+                                        </div> 
+                                        <div class="row">
+                                            <div class="form-group col-sm-3"> 
+                                                <label for="result">Revestimiento externo:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="1">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Revestimiento interno:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="2">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Revestimiento cubierta:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="5">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Condición Física:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div> 
+                                        </div> 
+                                        <div class="row">
+                                            <div class="form-group col-sm-3"> 
+                                                <label for="result">Etapa de la construcción:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="1">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Estado de conservación:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="2">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Condición de ocupación:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="5">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Tipo de acabo:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div> 
+                                        </div> 
+                                        <div class="row">
+                                            <div class="form-group col-sm-3"> 
+                                                <label for="result">Uso de la construcción:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="1" disabled>
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Valor cultural:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="2">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Año de construcción:</label>
+                                                <input type="text" class="form-control" id="result" placeholder="5">
+                                                <small id="emailHelp" class="form-text text-muted">Información.</small>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <label for="result">Agregar Imagen:</label>
+                                                <div class="input-group mb-3">
+                                                    <div class="custom-file">
+                                                      <input type="file" class="custom-file-input" id="customFileLangHTML" aria-describedby="file_foto">
+                                                      <label class="custom-file-label" for="customFileLangHTML"></label>
+                                                    </div> 
+                                                </div>
+                                            </div> 
+                                        </div> 
+                                        <hr>
+                                        <div class="btn-form d-flex align-items-center justify-content-center">
+                                            <button type="submit" class="btn btn-info">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div> 
+
+                </div>
+                <hr>
+                <div class="btn-form d-flex align-items-center justify-content-center">
+                    <button type="submit" class="btn btn-dark" onclick="scrollToTop()">Ir al inicio<i class="fa-solid fa-arrow-up ml-2"></i></button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div> 
 </div>

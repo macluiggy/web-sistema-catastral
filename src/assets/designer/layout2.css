@@ -1,0 +1,157 @@
+/*----------------------------
+          [GENERAL]
+----------------------------*/
+html, body { 
+    height: 100%; 
+} 
+body {
+     margin: 0;
+     font-family: Roboto, "Helvetica Neue", sans-serif;
+     background-color: #F2F2F2!important; 
+     font-size: 14px!important;
+     color: #797979;
+} 
+::selection { 
+     background: #f07167; 
+     color:#fff; 
+} 
+/*----------------------------
+          [HEADER]
+----------------------------*/
+header{
+    height: auto;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 5;
+}
+.header-title{
+    background-color: #073361;
+    color: white;
+    padding: 8px 0;
+} 
+.header-menu{
+    background-color: #f07167;
+    color:#fff; 
+    height: auto;
+    padding: 8px;
+    font-size: 14px;
+}
+.nav-link{
+    padding: 0rem 1rem!important;
+    color: #ffffff!important;
+}
+.nav-item .active{
+    background-color: white;
+    color: #f07167!important;
+    border-radius: 25px;
+}
+.nav-right{
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.txt-important{
+    color: #f07167; 
+}
+.btn-primary{
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+/*----------------------------
+          [BODY]
+----------------------------*/
+.box-section{
+    padding-top:93px;
+}
+.container{    
+    background-color: #ffffff;  
+}
+.tab-content{ 
+    background-color: #ffffff;  
+    padding: 20px!important;
+    margin: 25px;
+    border-radius: 10px;
+}
+.form-group__section{
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: .375rem .75rem;
+    height: 100%;
+}
+.form-group__section ul{
+    list-style: none; 
+    margin: 0;
+    padding: 0;    
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-group__section ul li{ 
+    margin-right: 10px;
+}
+/*----------------------------
+          [SCROLL]
+----------------------------*/
+.form-control:focus{
+    box-shadow: none!important;
+}
+.input-group>.custom-file .custom-file-input:focus{
+    box-shadow: none!important;
+}
+.custom-file-input:focus~.custom-file-label{
+    box-shadow: none!important;
+}
+.btn-file{
+    padding: 0 10px!important;
+}
+.custom-file-label::after{
+    content: "Subir Fotografía"!important;
+}
+.btn{
+    font-size: .8rem!important;
+}
+.form-control{
+    font-size: 14px!important;
+}
+.divider{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.divider b{
+    background-color: white;    
+    padding-right: 10px;
+    z-index: 2;
+}
+.divider hr{
+    position: absolute;
+    width: 100%;
+}
+.card-header{
+    padding: 0!important;
+}
+.btn-link{
+   color: #212529!important; 
+}
+/*----------------------------
+          [SCROLL]
+----------------------------*/
+body::-webkit-scrollbar-track
+{
+    border-radius: 8px;
+    background-color: #f0f0f0;
+}
+
+body::-webkit-scrollbar
+{
+    width: 5px;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb
+{
+    border-radius: 8px;
+    background-color: #f07167;
+}
+
