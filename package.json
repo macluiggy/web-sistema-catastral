@@ -21,6 +21,7 @@
     "@fortawesome/fontawesome-free": "^6.1.1",
     "@ng-idle/core": "^11.1.0",
     "@ng-idle/keepalive": "^11.0.3",
+    "bootstrap": "^5.2.3",
     "crypto-js": "^4.1.1",
     "date-fns": "^2.29.3",
     "moment": "^2.29.4",
